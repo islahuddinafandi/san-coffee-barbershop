@@ -40,7 +40,7 @@ export default function LocationSection() {
                 rel="noopener noreferrer"
                 className="inline-block mt-8 text-xs uppercase tracking-widest text-gold border-b border-gold pb-0.5 hover:text-cream-100 hover:border-cream-100 transition-colors duration-200"
               >
-                Petunjuk Arah →
+                Petunjuk Arah {String.fromCharCode(8594)}
               </a>
             </div>
           ))}
