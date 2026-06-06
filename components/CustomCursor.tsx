@@ -18,7 +18,7 @@ export default function CustomCursor() {
     const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX
       mouseY = e.clientY
-      if (!isVisible) setIsVisible(true)
+      setIsVisible(true)
       if (dotRef.current) {
         dotRef.current.style.left = mouseX + 'px'
         dotRef.current.style.top = mouseY + 'px'
@@ -40,9 +40,7 @@ export default function CustomCursor() {
     const onMouseLeave = () => setIsVisible(false)
     const onMouseEnter = () => setIsVisible(true)
 
-    const hoverables = document.querySelectorAll(
-      'a, button, [data-cursor-hover]'
-    )
+    const hoverables = document.querySelectorAll('a, button, [data-cursor-hover]')
     hoverables.forEach((el) => {
       el.addEventListener('mouseenter', onMouseEnterHoverable)
       el.addEventListener('mouseleave', onMouseLeaveHoverable)
@@ -63,29 +61,10 @@ export default function CustomCursor() {
       })
       cancelAnimationFrame(animFrameId)
     }
-  }, [isVisible])
+  }, []) // ← dependency array dikosongkan
 
   return (
     <>
       <div
         ref={dotRef}
-        className="fixed pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold transition-[width,height,opacity] duration-150"
-        style={{
-          width: isHovering ? '6px' : '8px',
-          height: isHovering ? '6px' : '8px',
-          opacity: isVisible ? 1 : 0,
-        }}
-      />
-      <div
-        ref={ringRef}
-        className="fixed pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 rounded-full border transition-[width,height,opacity,border-color] duration-300"
-        style={{
-          width: isHovering ? '64px' : '36px',
-          height: isHovering ? '64px' : '36px',
-          opacity: isVisible ? 1 : 0,
-          borderColor: isHovering ? '#EDD9B3' : '#C8A96E',
-        }}
-      />
-    </>
-  )
-}
+        classNam
