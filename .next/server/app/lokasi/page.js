@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/lokasi/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__01z1vwl._.js")
+R.c("server/chunks/ssr/07su_next_dist_esm_build_templates_app-page_0m0tpyi.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1qpho36._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0hj49ek._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0ar5467._.js")
+R.c("server/chunks/ssr/07su_next_dist_client_components_1p_p1_t._.js")
+R.c("server/chunks/ssr/07su_next_dist_client_components_builtin_forbidden_19lq302.js")
+R.c("server/chunks/ssr/07su_next_dist_client_components_builtin_unauthorized_0yf2_ws.js")
+R.c("server/chunks/ssr/07su_next_dist_client_components_builtin_global-error_1x1iuia.js")
+R.c("server/chunks/ssr/_next-internal_server_app_lokasi_page_actions_1-7w0je.js")
+R.m(62362)
+module.exports=R.m(62362).exports
